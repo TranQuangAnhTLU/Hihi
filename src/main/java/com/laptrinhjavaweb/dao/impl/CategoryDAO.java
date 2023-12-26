@@ -1,5 +1,6 @@
 package com.laptrinhjavaweb.dao.impl;
 
+
 import java.util.List;
 
 import com.laptrinhjavaweb.dao.ICategoryDAO;
@@ -16,6 +17,18 @@ public class CategoryDAO extends AbstractDAO<CategoryModel> implements ICategory
 	public List<CategoryModel> findAll() {
 		String sql = "SELECT * FROM category";
 		return query(sql,new CategoryMapper());
+	}
+
+	@Override
+	public CategoryModel findOne(long id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public CategoryModel findOneByCode(String code) {
+		
+		return null;
 	}
 	
 

@@ -5,10 +5,10 @@ import java.sql.SQLException;
 
 import com.laptrinhjavaweb.model.CategoryModel;
 
-public class CategoryMapper implements RowMapper {
+public class CategoryMapper implements RowMapper<CategoryModel> {
 
 	@Override
-	public Object mapRow(ResultSet resultSet) {
+	public CategoryModel mapRow(ResultSet resultSet) {
 		try {
 			CategoryModel category = new CategoryModel();
 			category.setId(resultSet.getLong("id"));
